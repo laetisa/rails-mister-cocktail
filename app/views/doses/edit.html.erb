@@ -1,2 +1,17 @@
 <h1>Doses#edit</h1>
-<p>Find me in app/views/doses/edit.html.erb</p>
+
+<tbody>
+    <% @cocktails.each do |cocktail| %>
+      <tr>
+        <td><%= cocktail.name %></td>
+        <td><%= cocktail.description %></td>
+        <td><%= link_to 'Show', cocktail %></td>
+        <td><%= link_to 'Edit', edit_cocktail_path(cocktail) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %>

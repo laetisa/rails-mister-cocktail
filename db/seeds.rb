@@ -12,10 +12,10 @@ url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 result = JSON.parse(open(url).read)
 
 array = []
-result[":drinks"].each do |el|
-  array << el[":strIngredient1"]
+result["drinks"].each do |el|
+  array << el["strIngredient1"]
 end
 
 array.each do |el|
-Ingredient.create(name: el)
-p array[1]
+Ingredient.create!(name: el)
+end

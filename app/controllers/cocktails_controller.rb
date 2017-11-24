@@ -6,6 +6,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    set_cocktail
   end
 
   def new
